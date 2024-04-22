@@ -32,7 +32,7 @@ sns.boxplot(data=train_titanic,x='Survived',y='Age',hue='Sex')
 sns.violinplot(data=train_titanic,x='Survived',y='Age',hue='Sex',split=True)
 plt.scatter(x='Pclass', y='SibSp',data=train_titanic,c = 'red')
 
-## Logistic regression
+## Logistic regression first model
 train_titanic.replace({'Sex':{'male':0,'female':1},'Embarked':{'C':0,'Q':1,'S':2}},inplace=True)
 print(train_titanic.head())
 X = train_titanic.drop(columns=['PassengerId', 'Survived','Name','Ticket'])
@@ -67,7 +67,7 @@ actual_pred = logmodel.predict(test_X)
 print(actual_pred)
 
 
-##
+##incomplete ignore
 # from sklearn.svm import SVC
 # train_titanic.replace({'Sex':{'male':0,'female':1},'Embarked':{'C':0,'Q':1,'S':2}},inplace=True)
 # print(train_titanic.head())
